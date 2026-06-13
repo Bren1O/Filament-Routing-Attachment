@@ -1,0 +1,105 @@
+% ============================================================
+%  Filament Guide Attachment -- Design Report
+%  Author: Brenton Miller
+% ============================================================
+
+\documentclass[12pt, a4paper]{article}
+
+% --- Page layout ---
+\usepackage[top=25mm, bottom=25mm, left=25mm, right=25mm]{geometry}
+
+% --- Typography ---
+\usepackage{parskip}          % space between paragraphs, no indent
+\usepackage{microtype}        % subtle spacing improvements
+
+% --- Figures ---
+\usepackage{graphicx}
+\usepackage{float}            % [H] placement
+\usepackage{caption}
+\usepackage{tabularx}
+\captionsetup{font=small, labelfont=bf}
+
+% --- Tables ---
+\usepackage{booktabs}
+
+% --- Hyperlinks ---
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black
+]{hyperref}
+
+% --- Bibliography ---
+\usepackage[
+backend=biber,
+style=ieee,
+sorting=none
+]{biblatex}
+\addbibresource{./Refs/references.bib}
+
+% --- Header / Footer ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Filament Routing Attachment}
+\lhead{\small Brenton Miller}
+\cfoot{\small \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%---  DEFINE THINGS -----
+\def\Printername{Ender-3 V3 SE} % never remeber this things full name
+
+% ============================================================
+\begin{document}
+
+% --- Title block ---
+\begin{titlepage}
+    \centering
+    \vspace*{40mm}
+
+    {\LARGE \textbf{Filament Routing Attachment}}\\[4mm]
+    {\large Design and Manufacture Report}\\[10mm]
+
+    \rule{0.5\textwidth}{0.4pt}\\[8mm]
+
+    {\large Brenton Miller}\\[2mm]
+    {\normalsize Gold Coast, QLD}\\[2mm]
+    {\normalsize \today}\\[10mm]
+
+    \rule{0.5\textwidth}{0.4pt}\\[8mm]
+
+    {\small
+        \begin{tabular}{ll}
+            Printer   & \Printername    \\
+            Material  & PLA   \\
+            CAD Tool  & FreeCAD  \\
+            Version   & 1.0                \\
+        \end{tabular}
+    }
+
+    \vfill
+    {\small \textit{Part of an open-source engineering portfolio.}\\
+    GitHub: \url{https://github.com/Bren1O/Filament-Routing-Attachment}}
+\end{titlepage}
+
+% ============================================================
+\input{chapters/Introduction.tex}
+\input{chapters/Design.tex}
+\input{chapters/Manufacturing.tex}
+\input{chapters/Results.tex}
+\input{chapters/Conclusion.tex}
+% ============================================================
+
+
+
+
+
+
+
+
+
+
+
+\printbibliography
+\end{document}

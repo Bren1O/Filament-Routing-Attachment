@@ -1,0 +1,85 @@
+\section{Design}
+
+\subsection{Constraints and Goals}
+
+The following constraints were identified prior to design:
+
+\begin{itemize}
+	\item Must mount to the existing filament holder location with no
+	permanent modification to the printer frame.
+	\item Must accommodate filament [diameter, 1.75\,mm]
+	without excessive clearance that could cause buckling.
+	\item Bend radius must be sufficient to prevent filament binding or
+	fatigue cracking during continuous use.
+	\item Should print without support material where possible to
+	minimise post-processing.
+	\item Must be set high enough so the filament line cannot collide with larger prints. 
+	\item Must be able to withstand the partial weight of the dryer, Approx 1kg (Sometimes filament gets tangled inside the dryer and pulls the dryer over.).  
+	\item Must be able to resist heat that is generated from the printing of parts 
+	on the Ender 3. 
+	 
+\end{itemize}
+
+\subsection{Design Concepts}
+There are two major considerations for the filament design that need to be considered.
+ The interface with the \Printername, and how the filament is to be guided. These considerations
+  with be evaluated independently then combined together as the final design. 
+  
+
+\subsubsection{Printer Attachment Interface}
+\paragraph{Original Design} One concept for the attachment of the Filament Guide would be to reuse the original handle that hold up the filament spool. This could be a simple and approved design that has been shown to work. The original attachment as well as the printed concept can be seen in Fig.\ref{fig:OrignalDesignConcept}. 
+
+
+\begin{figure}[tbh!]
+	\centering
+	\includegraphics[width={\dimexpr\textwidth/2 - 6pt - 1pt\relax}]{./Images/OriginalMountRemade.png}
+	\includegraphics[width={\dimexpr\textwidth/2 - 6pt - 1pt\relax}]{./Images/OrignalMount3DPrintedConcept.png}
+	\caption{My Current \Printername\;setup}\label{fig:OrignalDesignConcept}
+\end{figure}
+
+
+
+\begin{tabularx}{\textwidth}{|X|X|}
+	\hline
+	Pro's & Con's \\
+	\hline
+	\begin{itemize}
+		\item Proven Design
+		\item Inner hole radius can be decreased to increase strength. 
+	\end{itemize}& \begin{itemize}
+	\item Requires support
+	\item Required accurate tolerance between nut and attachment.
+\end{itemize} \\
+	\hline
+\end{tabularx}   
+
+
+
+\paragraph{Bolted into Gantry Frame}
+The second concept would be to bolt the deigns directly into the Gantry stand, reusing the bolt holes that were used for the rack. This design would  take advantage of the original printer interface and can be removed via unbolting. 
+
+
+
+\subsection{Bend Radius Selection}
+
+% TODO: document your bend radius decision here.
+% Example: "A minimum bend radius of X mm was selected based on ..."
+% If you run a calculation or test, describe it here.
+A minium bend radius was assumed using the spool of a previous PLA filament.  
+
+
+\subsection{Geometry and Mounting}
+
+% TODO: describe the geometry of the guide -- the arc shape, the
+% slot/tube diameter, how it attaches to the printer.
+
+[Describe the guide geometry and mounting approach here.]
+
+\subsection{Material Selection}
+
+% TODO: explain why you chose the filament you used for the guide.
+% Consider temperature resistance, rigidity, ease of printing.
+
+I have 
+
+% ============================================================
