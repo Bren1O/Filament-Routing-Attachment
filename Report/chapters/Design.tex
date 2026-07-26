@@ -1,6 +1,6 @@
 \section{Design}
 
-\subsection{Constraints and Goals}
+\subsection{Constraints and Goals} \label{Sec:ConstraintsandGoals}
 
 The following constraints were identified prior to design:
 
@@ -188,7 +188,40 @@ The second concept would be to replace the original L-Bracket on the \Printernam
 \end{figure}
 \paragraph{Design Concepts Conclusion} The final selection that was picked was the Twist Lock interface, and the Fixed Pulley Guide routing guide as can be seen in Fig.\ref{fig:Design1TwistLock_Spool}. The design is almost identical to the make-shift version that I currently use as seen in Fig.\ref{fig:CurrentSetup}. Overall this design is not the most interesting or complex version that I could have designed, however, I do feel as it is the most practical. 
 \subsection{Material Selection}
-%I have not explored the different material that are compatible with my \Printername. So far I have exclusively used PLA for
+I have not explored the different material that are compatible with my \Printername. So far I have exclusively used PLA for my designs. I think now would be appropriate to consider PETG as a potential material.
+
+The requirements of the design can be seen in Sec.\ref{Sec:ConstraintsandGoals}, the most relevant constrains from the  material perspective is the heat resistance, ductility and strength. 
+
+\begin{table}[H]
+	\caption{Material Properties}\label{tab:MaterialSelection}
+	\renewcommand\tabularxcolumn[1]{m{#1}}
+	\rowcolors{2}{white}{gray!10}
+	\begin{tabularx}{\textwidth}{	>{\raggedright\arraybackslash}m{0.44\textwidth}
+									>{\centering\arraybackslash}X
+									>{\centering\arraybackslash}X}
+			\toprule
+			Property&	PLA & PETG \\
+			\midrule 
+			Tensile Strength \autocite{PLAvsPETGUltimaker}\autocite{WhatPLAFilament} & ~50-60\,MPa & 40-50\,MPa\\
+			Heat Deflection Temperature (HDT) \autocite{PLAvsPETGUltimaker}  & 55$^\circ$ & 70$^\circ$ \\
+			Chemical / UV Resistance \autocite{PLAvsPETGUltimaker}  & Low  & Moderate \\
+			Ductility (\% Elongation)\autocite{WhatPLAFilament}  & 6\% & 20\% \\
+			Impact resistance\autocite{PLAvsPETGUltimaker} & Lower & Moderate \\
+			Printability\autocite{PLAvsPETGUltimaker}  & High & Moderate \\
+			\bottomrule
+	\end{tabularx}  
+\end{table}
+
+When comparing the properties of the material for the design, the PETG and PLA both have advantages and disadvantages. The key material properties for the design are the heat resistance, ductility and strength. The properties from Tab.\ref{tab:MaterialSelection} will be compared. It should be noted that these values are just common ranges and depend on the specific filament. 
+\begin{itemize}
+	\item \textbf{{Ductility -}} Should the design fail, having a ductile material is preferable as it shows visible signs of failure before catastrophic failure. PETG is significantly more ductile than PLA\autocite{WhatPLAFilament}. This is key as if failure occurs it would fall damaging both the current print and the Ender 3 printer itself.
+	\item \textbf{Tensile strength -} PLA and PETG both have comparable tensile strengths. PLA has a slightly higher tensile strength on average\autocite{PLAvsPETGUltimaker}, however in some cases can be comparable\autocite{WhatPLAFilament}.  
+	\item \textbf{Heat Deflection Temperature -} The heat deflection temperature (HDT) is important due to the proximity of the filament holder to the extruder. PETG has higher HDT than PLA. PLA and PETG have a HDT of 55$^\circ$, and 70$^\circ$ respectively \autocite{PLAvsPETGUltimaker}. It is unlikely that the filament holder would experience temperatures this high as the nozzle would be continuously moving, and on the other side of the extruding head.
+	\item \textbf{Impact Resistance -} During printing, sometimes the filament gets tangled and causes a knot, however, the printer still continues to extrude the filament. As the filament dryer is pulled, it sometimes falls, causing pulling on the filament guide. While this is not common, and the filament roll and the dryer are not heavy (~2\,kg), this is still a possibility that could induce catastrophic failure. PETG is more impact resistant than PLA \autocite{PLAvsPETGUltimaker}.   
+\end{itemize} 
+
+
+When considering the material properties of PLA and PETG, PETG is more suited for this application. The main driving factor is the ductility of PETG. This allows for visible signs of failure before catastrophic failure. It has comparable strength to PLA, and superior HDT. Additionally it also has better impact resistance which might be applicable if the filament gets knotted.  
 % TODO: explain why you chose the filament you used for the guide.
 % Consider temperature resistance, rigidity, ease of printing.
 
